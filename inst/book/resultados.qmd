@@ -28,7 +28,7 @@ bibliography: references.bib
 
 <!-- ## Resultados empíricos {#sec-result-sim} -->
 
-Neste capítulo, discute-se os resultados da metodologia WAWL. Para isso, são apresentadas resultados empíricos que demostram que os a proposta possui bons resultados.
+Neste capítulo, discute-se os resultados da metodologia WAWL. Para isso, são apresentadas resultados empíricos que demostram que a proposta possui bons resultados.
 
 ```{r}
 #| echo: false
@@ -349,7 +349,7 @@ Para lidar com o fato da acurácia ser um número limitado, fizemos o mesmo grá
 
 $$
 \text{ganho} = \frac{\text{oráculo } - \text{ inicial}}{1\; - \text{ inicial}}.
-$$ A @fig-simulacao-geral-inicial-absoluto-ajustado mostra os ganhos ajustados. Pelo gráfico, é possível notar que existe um ganho expressivo da técnica WAWL do oráculo para modelos iniciais com mais de 10% de acurácia com relação a modelos iniciais com até 10% de acurácia. Ou seja, quando o modelo inicial é fraco, o ganho ao usar a técnica é menor. É importante notar, no entanto, que as simulações mostram a aplicação da técnica apenas uma vez -- é possível baixar mais dados e atualizar o modelo indefinidamente. O menor efeito da técnica para modelos iniciais fracos não significa, portanto, que a técnica não funciona para modelos iniciais fracos; pelo contrário: ela ajuda o modelo a sair do estado inicial e o leva para um estado com acurácia maior, de onde seria possível aplicar a técnica novamente para obter resultads mais expressivos.
+$$ A @fig-simulacao-geral-inicial-absoluto-ajustado mostra os ganhos ajustados. Pelo gráfico, é possível notar que existe um ganho expressivo da técnica WAWL do oráculo para modelos iniciais com mais de 10% de acurácia com relação a modelos iniciais com até 10% de acurácia. Ou seja, quando o modelo inicial é fraco, o ganho ao usar a técnica é menor. É importante notar, no entanto, que as simulações mostram a aplicação da técnica apenas uma vez -- é possível baixar mais dados e atualizar o modelo indefinidamente. O menor efeito da técnica para modelos iniciais fracos não significa, portanto, que a técnica não funciona para modelos iniciais fracos; pelo contrário: ela ajuda o modelo a sair do estado inicial e o leva para um estado com acurácia maior, de onde seria possível aplicar a técnica novamente para obter resultados mais expressivos.
 
 ```{r}
 #| label: fig-simulacao-geral-inicial-absoluto-ajustado
@@ -457,7 +457,7 @@ doutorado::da_results_simulacao |>
   )
 ```
 
-Pelo gráfico, é possível identificar duas informações relevantes. Como já verificado anteriormente, os modelos ajustados com mais de uma tentativa apresentam maiores ganhos do que os modelos ajustados com apenas uma tentativa. Verifica-se também que modelos com acurácia inicial de até 10% só apresentam ganhos menores que os modelos com acurácia inicial maior que 10% nos casos em que apenas uma tentativa é definda. Ou seja, existe interação entre a quantidade de tentativas e a acurácia do modelo inicial ao avaliar o impacto nos ganhos empíricos do método WAWL.
+Pelo gráfico, é possível identificar duas informações relevantes. Como já verificado anteriormente, os modelos ajustados com mais de uma tentativa apresentam maiores ganhos do que os modelos ajustados com apenas uma tentativa. Verifica-se também que modelos com acurácia inicial de até 10% só apresentam ganhos menores que os modelos com acurácia inicial maior que 10% nos casos em que apenas uma tentativa é definida. Ou seja, existe interação entre a quantidade de tentativas e a acurácia do modelo inicial ao avaliar o impacto nos ganhos empíricos do método WAWL.
 
 Pelos resultados das simulações, é possível concluir que o método WAWL foi bem sucedido. Primeiro, o método apresenta resultados expressivos e de forma consistente, sem realizar novas anotações manuais. Além disso, a técnica aproveita a oportunidade oferecida pelos sites de obter o *feedback* oráculo múltiplas vezes na mesma imagem. Finalmente, o método apresenta, em média, resultados positivos mesmo para modelos iniciais muito fracos (com acurácia de até 10%), indicando que sua aplicação é possível para qualquer modelo inicial, o que é bastante factível de atingir com bases pequenas ou com modelos generalistas para resolver Captchas.
 
